@@ -9,7 +9,6 @@ import {
 import { ElementRef } from '@angular/core';
 import { AfterViewInit } from '@angular/core';
 import { LocationService } from '../location.service';
-import { error } from '@angular/compiler/src/util';
 import { Locations } from '../location-class/location';
 
 @Component({
