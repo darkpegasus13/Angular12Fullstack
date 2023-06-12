@@ -29,6 +29,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   providers: [LocationService],
-  bootstrap: [LandingPageComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
