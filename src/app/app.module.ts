@@ -7,19 +7,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LocationService } from './location.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LocationClassComponent } from './location-class/location-class.component';
+import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+
+const routes: Routes = [
+  { path: 'login', component: LoginComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    LocationClassComponent
+    LocationClassComponent,
+    LoginComponent
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [LocationService],
   bootstrap: [LandingPageComponent]
