@@ -6,9 +6,8 @@ import {
   animate,
   transition,
 } from '@angular/animations';
-import { ElementRef } from '@angular/core';
 import { AfterViewInit } from '@angular/core';
-import { LocationService } from '../location.service';
+import { LocationService } from '../Services/location.service';
 import { Locations } from '../location-class/location';
 
 @Component({

@@ -1,1 +1,16 @@
-<h1>login works!</h1>
+<div class="container-fluid">
+  <h1>Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="OnSubmit()">
+    <label for="name">User Name</label>
+    <input type="text" class="form-control" id="name"
+           formControlName="userName">
+    <span class="text-danger"
+          *ngIf="(loginForm.controls.userName.touched) && loginForm.controls.userName.errors?.required">
+      User Name is required
+    </span>
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password"
+           formControlName="password">
+    <button type="submit">Login</button>
+  </form>
+</div>
