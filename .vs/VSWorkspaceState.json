@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\landing-page",
+    "\\src\\app\\location-class"
   ],
-  "SelectedNode": "\\C:\\Users\\jayesh_bhushan\\Desktop\\DemoProj",
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }
