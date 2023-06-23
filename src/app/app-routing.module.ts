@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: 'home', component: LandingPageComponent
   },
+  //lazy loading a module
   {
     path: 'location-details',
     loadChildren: () => import('./location-details/location-details.module')

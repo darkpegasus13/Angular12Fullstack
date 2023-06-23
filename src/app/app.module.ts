@@ -13,7 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { InterceptorService } from './Services/interceptor.service';
 import { AppRoutingModule } from './app-routing.module';
-import { LocationDetailsModule } from './location-details/location-details.module';
+import { TempConverterPipe } from 'src/app/CustomPipes/TemperatureConverterPipe';
 
 
 @NgModule({
@@ -23,6 +23,7 @@ import { LocationDetailsModule } from './location-details/location-details.modul
     LocationClassComponent,
     LoginComponent,
     NavBarComponent,
+    TempConverterPipe
   ],
   imports: [
     BrowserModule,
