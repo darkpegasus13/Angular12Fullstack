@@ -1,5 +1,6 @@
-a.nav-link, .navbar-brand {
+a.nav-link, .navbar-brand, li.nav-item {
   color: white !important;
+  cursor:pointer;
 }
 
 .nav-item {
