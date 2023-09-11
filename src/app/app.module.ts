@@ -23,7 +23,9 @@ import { CanActivateRouteGuardService } from './Services/can-activate-route-guar
     LandingPageComponent,
     LocationClassComponent,
     LoginComponent,
-    NavBarComponent
+    NavBarComponent,
+    TempConverterPipe,
+    HoverDirective
   ],
   imports: [
     BrowserModule,

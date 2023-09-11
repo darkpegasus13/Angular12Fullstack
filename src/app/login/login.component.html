@@ -8,10 +8,8 @@
           *ngIf="(loginForm.controls.userName.touched) && loginForm.controls.userName.errors?.required">
       User Name is required
     </span>
-    <label for="password">Password</label>
-    <input type="password" class="form-control appHoverDirective" id="password"
     <label for="password" class="mt-1">Password</label>
-    <input type="password" class="form-control" id="password"
+    <input type="password" class="form-control appHoverDirective" id="password"
            formControlName="password">
     <button class="btn btn-primary mt-4 mb-2" type="submit">Login</button>
     <!--using a custom pipe-->
@@ -20,6 +18,5 @@
           *ngIf="(loginForm.controls.password.touched) && loginForm.controls.password.errors?.required">
       Password is required
     </span>
-    <button type="submit">Login</button>
   </form>
 </div>
