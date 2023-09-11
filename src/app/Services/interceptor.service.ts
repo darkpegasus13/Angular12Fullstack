@@ -10,8 +10,10 @@ import { Observable } from 'rxjs';
 export class InterceptorService implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    alert("intercepted");
     const baseUrl = "localhost:900";
     const newReq = req.clone({ url: baseUrl + req.url })
+    console.log(newReq);
     return next.handle(newReq);
   }
 }

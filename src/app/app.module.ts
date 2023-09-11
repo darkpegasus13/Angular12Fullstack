@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LocationService } from './Services/location.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LocationClassComponent } from './location-class/location-class.component';
-import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -14,7 +13,7 @@ import { InterceptorService } from './Services/interceptor.service';
 import { AppRoutingModule } from './app-routing.module';
 import { TempConverterPipe } from 'src/app/CustomPipes/TemperatureConverterPipe';
 import { HoverDirective } from './CustomDirectives/hover.directive';
-import { CanActivateRouteGuardService } from './Services/can-activate-route-guard.service';
+import { LoggingInterceptor } from './logging.interceptor';
 
 
 @NgModule({
@@ -34,7 +33,8 @@ import { CanActivateRouteGuardService } from './Services/can-activate-route-guar
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [LocationService],
+  providers: [LocationService,
+    { provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
