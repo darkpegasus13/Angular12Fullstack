@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="container login-container" >
   <h1>Login</h1>
-  <form [formGroup]="loginForm" (ngSubmit)="OnSubmit()">
+  <form [formGroup]="loginForm" (ngSubmit)="OnSubmit()" class="mt-4">
     <label for="name">User Name</label>
     <input appHoverDirective type="text" class="form-control" id="name"
            formControlName="userName">
@@ -10,7 +10,12 @@
     </span>
     <label for="password">Password</label>
     <input type="password" class="form-control appHoverDirective" id="password"
+    <label for="password" class="mt-1">Password</label>
+    <input type="password" class="form-control" id="password"
            formControlName="password">
+    <button class="btn btn-primary mt-4 mb-2" type="submit">Login</button>
+    <!--using a custom pipe-->
+    {{34 | tempConverter:'F'}}
     <span class="text-danger"
           *ngIf="(loginForm.controls.password.touched) && loginForm.controls.password.errors?.required">
       Password is required

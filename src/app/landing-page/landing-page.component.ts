@@ -9,6 +9,7 @@ import {
 import { AfterViewInit } from '@angular/core';
 import { LocationService } from '../Services/location.service';
 import { Locations } from '../location-class/location';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -16,10 +17,10 @@ import { Locations } from '../location-class/location';
     trigger('openClose', [
       // ...
       state('open', style({
-        transform:'translateX(-200%)'
+        transform: 'translateX(-200%)'
       })),
       state('closed', style({
-        transform:'translateX(0%)'
+        transform: 'translateX(0%)'
       })),
       transition('open => closed', [
         animate('0.5s ease-in')
@@ -30,6 +31,14 @@ import { Locations } from '../location-class/location';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements AfterViewInit {
+
+  constructor(private service: LocationService, private renderer: Renderer2, private router: Router) {
+    this.arr = this.location;
+    setTimeout(() => {
+      this.isOpen = false;
+    }, 20);
+  }
+
   filtersLoaded!: Promise<boolean>;
   active_location!: Locations;
   arr: any[];
@@ -44,12 +53,12 @@ export class LandingPageComponent implements AfterViewInit {
         break;
       }
     }
-    console.log(elem.target.children[0].children[2].innerHTML )
+    console.log(elem.target.children[0].children[2].innerHTML)
     document.body.style.backgroundImage = elem.target.style['background-image'].split(")), ")[1]
     this.renderer.setStyle(elem.target, 'background-image', elem.target.style['background-image'].split(")), ")[1]);
   }
   tile_normal(elem: any) {
-    this.renderer.setStyle(elem.target, 'background-image', "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),"+elem.target.style['background-image']);
+    this.renderer.setStyle(elem.target, 'background-image', "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))," + elem.target.style['background-image']);
   }
 
   ngOnInit() {
@@ -63,15 +72,13 @@ export class LandingPageComponent implements AfterViewInit {
       error: error => this.errorMsg = error
     })
   }
-  
-  constructor(private service: LocationService, private renderer: Renderer2) {
-    this.arr = this.location;
-    setTimeout(() => {
-        this.isOpen=false;
-      }, 20); 
-  }
+
   ngAfterViewInit() {
-    
+
+  }
+  navigateToLocation() {
+    debugger;
+    this.router.navigate(["/location-details"]);
   }
 }
 
