@@ -11,11 +11,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HoverDirective } from './CustomDirectives/hover.directive';
+import { CanActivateRouteGuardService } from './Services/can-activate-route-guard.service';
+import { AppRoutingModule } from './app-routing.module';
 
-const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: LandingPageComponent }
-];
 
 @NgModule({
   declarations: [
@@ -23,16 +22,17 @@ const routes: Routes = [
     LandingPageComponent,
     LocationClassComponent,
     LoginComponent,
-    NavBarComponent
+    NavBarComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [LocationService],
+  providers: [LocationService, CanActivateRouteGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
