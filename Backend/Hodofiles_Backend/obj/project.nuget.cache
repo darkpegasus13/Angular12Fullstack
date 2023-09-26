@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "/iCCreqYtfVPSp6Wo88mFKP3eqXinBfkogxQ7e+xpozubcvyiQx0G4Jgdd1uceqg93c/iLDVT2gSo3B7Cxq/Gg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jayes\\source\\repos\\Angular12Fullstack\\Backend\\Hodofiles_Backend\\CatalogService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jayes\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\jayes\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\jayes\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\jayes\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\jayes\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\jayes\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
