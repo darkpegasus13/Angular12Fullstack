@@ -1,11 +1,19 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CatalogService.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hodofiles_Backend.CatalogService.Controllers
 {
-    [Route("items")]
+    [Route("Destinations")]
     [ApiController]
     public class ItemsController : ControllerBase
     {
+        HodofilesContext context;
+
+        public ItemsController(HodofilesContext _context)
+        {
+            context = _context;
+        }
         //added static as it won't be created every time for each request
         private static readonly List<ItemDTO> items = new List<ItemDTO>()
         {
@@ -15,9 +23,9 @@ namespace Hodofiles_Backend.CatalogService.Controllers
         };
 
         [HttpGet]
-        public IEnumerable<ItemDTO> Get()
+        public IEnumerable<dynamic> Get()
         {
-            return items;
+            return context.Destinations.ToList();
         }
 
         [HttpGet("{id}")]
@@ -25,9 +33,10 @@ namespace Hodofiles_Backend.CatalogService.Controllers
         public ActionResult<ItemDTO> GetById(Guid id)
         {
             var item = items.Where(x => x.id == id).FirstOrDefault();
-            if(item==null)
+            if (item == null)
                 return NotFound();
             return item;
+
         }
 
         [HttpPost]
@@ -65,7 +74,6 @@ namespace Hodofiles_Backend.CatalogService.Controllers
             items.RemoveAt(index);
             return NoContent();
         }
-
 
     }
 }
