@@ -1,0 +1,16 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/Hodofiles",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7174
+        }
+      ],
+      "UpstreamPathTemplate": "/Destinations",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 using CatalogService;
 using CatalogService.Models;
+using CatalogService.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -15,6 +16,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //adding db context in .net 6 syntax
 builder.Services.AddDbContext<HodofilesContext>(options => options.UseSqlServer(settings.Database));
+builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();
 
 var app = builder.Build();
 
@@ -30,5 +32,4 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
 app.Run();

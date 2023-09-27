@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FQ+T3tCaVRgGMV8vvc1wZ4BBGru+IDP2CLRdIWLxwka54U6SrlG2f3ieWu7cd0Jk/UupTXQEYtjPISxA5/55Xg==",
+  "dgSpecHash": "KdPT5b+mFa95Y2PELEMzwIatIHIE+6mp4WqmvGzANgOW3dyWa3CactPGCx8uOKY59c/mVhOQiIcF5r6zUKSaMQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\jayes\\source\\repos\\Angular12Fullstack\\Backend\\Hodofiles_Backend\\CatalogService.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,7 @@
     "C:\\Users\\jayes\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\jayes\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\jayes\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\jayes\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512",
     "C:\\Users\\jayes\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\jayes\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\jayes\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",

@@ -1,14 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Hodofiles_Backend
+namespace CatalogService
 {
-    public record ItemDTO(Guid id, string name, string description,
-        decimal price, DateTimeOffset createdDate);
-
-    public record CreatedItemDTO([Required] string name,
-        string description,
-        [Range(0,1000)]decimal price);
-
-    public record UpdatedItemDTO(string name, string description,
-        decimal price);
+    public class DestinationDTO {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        };
 }
