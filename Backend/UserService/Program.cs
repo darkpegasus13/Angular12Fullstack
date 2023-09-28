@@ -15,10 +15,10 @@ builder.Services.AddHttpClient<DestinationsClient>(client =>
 {
     client.BaseAddress = new Uri("https://localhost:7178");
 })//added for exponential retries
-    .AddTransientHttpErrorPolicy(builder=>builder.Or<TimeoutRejectedException>().WaitAndRetryAsync(
+    .AddTransientHttpErrorPolicy(builder => builder.Or<TimeoutRejectedException>().WaitAndRetryAsync(
     5,
-    retryAttempt=>TimeSpan.FromSeconds(Math.Pow(2,retryAttempt))
-    +TimeSpan.FromSeconds(jitterer.Next())))
+    retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))
+    + TimeSpan.FromSeconds(jitterer.Next())))
     //added a policy to wait for the dependent client for only one second
     .AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(1));
 
