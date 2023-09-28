@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KdPT5b+mFa95Y2PELEMzwIatIHIE+6mp4WqmvGzANgOW3dyWa3CactPGCx8uOKY59c/mVhOQiIcF5r6zUKSaMQ==",
+  "dgSpecHash": "UVz38vesxmXURktk8axBm650BIhPzyFJtRYk1Nxwe+M0SRy5uq3SzIiOiWkNBrpyc97PRWDtJm9N9GoGhlyRjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jayes\\source\\repos\\Angular12Fullstack\\Backend\\Hodofiles_Backend\\CatalogService.csproj",
+  "projectFilePath": "C:\\Users\\jayes\\source\\repos\\Angular12Fullstack\\Backend\\Hodofiles_Backend\\DestinationService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jayes\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\jayes\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

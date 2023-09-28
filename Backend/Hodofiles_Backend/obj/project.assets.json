@@ -3199,9 +3199,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jayes\\source\\repos\\Angular12Fullstack\\Backend\\Hodofiles_Backend\\CatalogService.csproj",
-      "projectName": "CatalogService",
-      "projectPath": "C:\\Users\\jayes\\source\\repos\\Angular12Fullstack\\Backend\\Hodofiles_Backend\\CatalogService.csproj",
+      "projectUniqueName": "C:\\Users\\jayes\\source\\repos\\Angular12Fullstack\\Backend\\Hodofiles_Backend\\DestinationService.csproj",
+      "projectName": "DestinationService",
+      "projectPath": "C:\\Users\\jayes\\source\\repos\\Angular12Fullstack\\Backend\\Hodofiles_Backend\\DestinationService.csproj",
       "packagesPath": "C:\\Users\\jayes\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\jayes\\source\\repos\\Angular12Fullstack\\Backend\\Hodofiles_Backend\\obj\\",
       "projectStyle": "PackageReference",
